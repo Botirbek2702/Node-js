@@ -1,20 +1,20 @@
 const os = require("os")
   
 //platform
-// console.log(os.platform());
+console.log(os.platform());
 
 //infarmatsiya
-//console.log(os.cpus());
+console.log(os.cpus());
 
 //architecture
-//console.log(os.arch());
+console.log(os.arch());
 
 //free memoru
-//console.log(os.freemem());
+console.log(os.freemem());
 
 //total memory
-//console.log(os.totalmem());
+console.log(os.totalmem());
 
 //entry point
-//console.log(os.homedir());
+console.log(os.homedir());
 
