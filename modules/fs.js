@@ -1,4 +1,3 @@
 const fs = require("fs")
 const path = require("path")
-
-console.log("hello world");
+console.log("1");
