@@ -5,7 +5,7 @@ const { isUtf8 } = require("buffer")
 
 const server = http.createServer((req, res) =>{
     if(req.method === "GET"){
-        res.writeHead(200 , {'Content-Type' : 'text/html'})
+        
 
 
         if(req.url==="/"){
@@ -23,7 +23,16 @@ const server = http.createServer((req, res) =>{
                 if(err) throw err
                 res.end(content)
             })
-         }
+        }else if(req.url === "/api/admin"){
+            res.writeHead(200 , {'Content-Type' : 'text/html'})
+            const admin = {
+                name:"Botir",
+                surname:"Shuhratov",
+                phone: "+998-94-720-20-08"
+            }
+            res.end(JSON.stringify(admin))  
+            
+        }       
     
     
     
@@ -41,7 +50,7 @@ const server = http.createServer((req, res) =>{
     }
 })
  
-server.listen(5000, () =>{
-    console.log("Server has been started on port: 5000");
+server.listen(3000, () =>{
+    console.log("Server has been started on port: 3000");
 })
 
